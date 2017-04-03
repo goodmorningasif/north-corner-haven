@@ -27,7 +27,7 @@ if (!defined('DB_USER')) {
 	define('DB_USER', 'dummy');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'nightfall');
+	define('DB_PASSWORD', 'dummy');
 }
 if (!defined('DB_HOST')) {
 	define('DB_HOST', 'localhost');
@@ -69,7 +69,7 @@ define('NONCE_SALT',       'H[|Va:K{bDjH);+cS+oO-;]-fX35-S1p1kyp<v-dg@wPH76VJl7,
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'nch';
+$table_prefix  = 'nch_';
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -88,7 +88,7 @@ define('WPLANG', '');
  * These are required because wordpress is installed in a subdirectory.
  */
 
-$local_path = '10.1.10.96/nch';
+$local_path = '10.1.10.96/north-corner-haven';
 // $_SERVER['SERVER_NAME']
 
 
@@ -125,3 +125,9 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
+/** 
+ *  Disables Theme Editor
+ */
+define('DISALLOW_FILE_EDIT',true);

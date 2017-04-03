@@ -36,8 +36,7 @@ Follow these steps to configure your install to your specific project.
   * [x]  set 'homepage' 
 4. GULPFILE.JS
   * [x]  set var uri in line 75
-5. .GITIGNORE-EXAMPLE
-  * [x]  remove '-example' from end of filepath
+5. .GITIGNORE
   * [x]  set filepath to inner CONFIG.PHP on line 75
 6. THEME FILES & FOLDERS
   * [x]  rename folder 'INIT' 
@@ -45,6 +44,8 @@ Follow these steps to configure your install to your specific project.
   * [x]  set var $GLOBALS['root'] and $GLOBALS['docpath'] in FUNCTIONS.PHP
   * [x]  set var $uri in _VARIABLES.SASS, 2 points
   * [x]  set @link and @package notes on all template files.
+7. WORDPRESS SUBMODULE
+  * [x]  run command `git submodule update --init`
 
 
 #### Starting/Editing Current Project
@@ -52,8 +53,8 @@ Follow these steps to start or edit a current project. See notes under DEV ENVIR
 
 In Terminal ...
 
-1. Run 'nmp install'  
-2. Run 'gulp'
+1. Run `npm install` 
+2. Run `gulp`
 
 
 #### Folder Structer

@@ -68,4 +68,3 @@ gulp.task('default', function() {
 	gulp.watch(paths.js, ['uglify']);
 	// gulp.watch([paths.modJs, paths.modCss], ['modernizr']);
 });
-
