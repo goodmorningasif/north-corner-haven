@@ -1,21 +1,21 @@
 {
-  "name": "[INIT]",
+  "name": "North Corner Haven",
   "version": "1.0.0",
-  "description": "[INIT]",
+  "description": "NCH 1.0 114101v1",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "[INIT]"
+    "url": "https://github.com/sdco-partners/north-corner-haven"
   },
   "author": "SDCO Partners",
   "license": "ISC",
   "bugs": {
-    "url": "[INIT]"
+    "url": "https://github.com/sdco-partners/north-corner-haven/issues"
   },
-  "homepage": "[INIT]",
+  "homepage": "https//northcorner-haven.com",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.1.1",

@@ -4,9 +4,9 @@
  *
  * Smart functions
  *
- * @link [INIT]
+ * @link NCH
  *
- * @package [INIT]
+ * @package NCH
  * @subpackage Wordpress
  * @since 1.0
  * @version 1.0
@@ -16,8 +16,8 @@
 
   /* Define Variables  */
   $GLOBALS['url'] = get_template_directory_uri();
-  $GLOBALS['root'] = '[INIT]';
-  $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'[INIT]';
+  $GLOBALS['root'] = '10.1.10.96/nch';
+  $GLOBALS['docpath'] = $_SERVER['DOCUMENT_ROOT'].'/nch';
 
   /* Add Styles, Fonts, and Javascript */
   function my_enqueue_style() {
