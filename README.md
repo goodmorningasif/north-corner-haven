@@ -95,4 +95,12 @@ In Terminal ...
 
 ### Feature Documentaion
 
-### Bugs
+#### Instagram API
+
+#### Known Bugs
+
+### Team 
+  
+  * SCRUM MASTER        :   Paige Feighley
+  * PRODUCT OWNER       :   Kristmar Muldrow
+  * DEVELOPMENT TEAM    :   Asifuzzaman Ahmed
