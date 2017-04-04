@@ -13,6 +13,11 @@
  */
 
   get_header(); ?>
+<!-- ==== Section: Head ==== -->
+<section id="head">
+	<div>North Corner Haven</div>
+	<div>Established 1972</div>
+</section>
 
 <!-- ==== Section: MAIN ==== -->
 <section id="main">
@@ -54,6 +59,7 @@
 	</div>
 </section>
 
+<!-- ==== Section: Foot ==== -->
 <section id="foot">
 	<div class="mail">
 		<p>Say Hello</p>
@@ -64,7 +70,11 @@
 		<div id="face"></div>
 		<div id="insta"></div>
 	</div>
-	<div class="address"></div>
+	<div class="address">
+		<p>3420 Charlotte Hwy</p>
+		<p>Lancaster, South Carolina</p>
+		<p>29720</p>
+	</div>
 	<div class="copyright">
 		<p>Site by SDCO Parters</p>
 	</div>
