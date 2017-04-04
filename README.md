@@ -61,31 +61,31 @@ In Terminal ...
 
 
 ```
---\INIT
-  |
-  --\assets
-  | 
-  --\components
-  |
-  --\prod
-  |
-  --\src
-    | 
-    --\js
-    | 
-    --\sass
-      -> _mixins.sass
-      -> _rest.sass
-      -> _variables.sass
-      -> styles.sass
--> 404.php
--> footer.php
--> function.php
--> header.php
--> index.php
--> sidebar.php
--> README.txt
--> style.css 
+|--/nch/
+|  |
+|  |--/assets/
+|  | 
+|  |--/components/
+|  |
+|  |--/prod/
+|  |
+|  |--/src/
+|    | 
+|    |--/js/
+|    | 
+|    |--/sass/
+|       └-- _mixins.sass
+|       └-- _rest.sass
+|       └-- _variables.sass
+|       └-- styles.sass
+└-- 404.php
+└-- footer.php
+└-- function.php
+└-- header.php
+└-- index.php
+└-- sidebar.php
+└-- README.txt
+└-- style.css 
 ```
 
 ### Dev Environment
@@ -93,5 +93,6 @@ In Terminal ...
 
 ### Deployment & Updates
 
+### Feature Documentaion
 
 ### Bugs
