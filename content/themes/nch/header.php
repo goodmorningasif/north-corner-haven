@@ -30,3 +30,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<!-- ==== Section: Head ==== -->
+<section id="head">
+	<div>North Corner Haven</div>
+	<div>Established 1972</div>
+</section>
