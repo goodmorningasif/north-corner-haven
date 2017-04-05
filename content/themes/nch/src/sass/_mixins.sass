@@ -1,5 +1,4 @@
 /* Media Breakpoints & Mixins */
-
 $break-xlarge: 1300px
 $break-large: 1024px
 $break-medium: 900px
@@ -19,7 +18,6 @@ $break-small: 500px
     
 
 /* Flexbox */
-
 =flex($d: flex, $j: space-between, $a: flex-start, $f: wrap)
   display: $d
   justify-content: $j
@@ -33,7 +31,6 @@ $break-small: 500px
   background-size: $s
 
 /* Browser Detection  */
-
 =browser($browsers: Mozilla)
   @each $browser in $browsers
     html[data-browser*="#{$browser}"] &

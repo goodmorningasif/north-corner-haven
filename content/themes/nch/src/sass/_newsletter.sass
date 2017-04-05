@@ -12,11 +12,47 @@
     input
       +auto
       display: block
-      max-width: 250px
-      width: 100%
 
+#name, #email
+  max-width: 350px
+  width: 100%
+  height: 40px
+  margin-top: 30px
+  padding-top: 5px
+  padding-left: 10px
+
+    
+
+#submit
+  -webkit-appearance: none
+  height: 40px
+  width: 200px
+  margin-top: 30px
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
 
+#name, #email
+  border: 2px solid $brown
+  font-family: AldusLTStd-Italic
+  font-weight: normal
+  font-style: normal
+  color: $brown
+  font-size: 1.3em
+
+
+  +placeholder
+	  font-family: AldusLTStd-Italic
+	  font-weight: normal
+	  font-style: normal
+	  color: $brown
+	  text-align: center
+
+#submit
+  @extend %sweetsansregular
+  border: none
+  background-color: $brown
+  color: $white
+  font-size: 0.8em
+  letter-spacing: 0.2em

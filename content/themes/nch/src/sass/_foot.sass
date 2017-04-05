@@ -1,0 +1,91 @@
+/*  _foot.sass */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+
+#foot
+  +flex(flex, space-between, center, wrap)
+  flex-direction: column
+  padding-top: 25px
+  padding-bottom: 25px
+
+  p
+    margin-top: 10px
+
+  .mail, .social, .address, .copyright
+    flex: 0 0 auto
+    margin-top: 40px
+
+  .mail
+    order: 2
+
+  .social
+    order: 1
+
+  .address
+    order: 3
+
+  .copyright
+    order: 4
+
+
+#face, #insta
+  +auto
+  display: inline-block
+  width: 40px
+  height: 40px
+
+#face
+  margin-right: 30px
+
+.border
+  position: fixed
+
+.border#left, .border#right
+  width: 8px
+  height: 100vh
+
+.border#top, .border#bottom
+  height: 8px
+  width: 100vw
+
+.border#left, .border#right, .border#top
+  top: 0
+
+.border#top, .border#bottom, .border#left
+  left: 0
+
+.border#bottom
+  bottom: 0
+
+.border#right
+  right: 0
+
+
+
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+
+#foot
+  background-color: $green
+
+  p
+    font-family: "Sweet Sans"
+    font-style: normal
+    font-weight: normal 
+    font-size: 0.9em
+    letter-spacing: 0.2em
+    color: $white
+    text-transform: uppercase
+
+  a
+    color: $white
+
+  .copyright
+    font-size: 0.8em
+
+.border
+  background-color: $green

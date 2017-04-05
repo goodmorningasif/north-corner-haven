@@ -36,7 +36,7 @@
 </section>
 
 <!-- ==== Section: Insta ==== -->
-<section id="insta">
+<section id="insta-feed">
   <?php get_template_part('components/insta'); ?>
 </section>
 
