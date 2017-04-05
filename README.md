@@ -93,7 +93,7 @@ In Terminal ...
 
 ### Deployment & Updates
 
-### Feature Documentaion
+### Feature Documentation
 
 #### Instagram API
 
@@ -101,6 +101,6 @@ In Terminal ...
 
 ### Team 
   
-  * SCRUM MASTER        :   Paige Feighley
-  * PRODUCT OWNER       :   Kristmar Muldrow
-  * DEVELOPMENT TEAM    :   Asifuzzaman Ahmed
+  * PROJECT MANAGER   :   Paige Feighley
+  * UX/UI DESIGNER    :   Kristmar Muldrow
+  * DEVELOPER         :   Asifuzzaman Ahmed

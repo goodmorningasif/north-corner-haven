@@ -3,8 +3,11 @@ $uri: "/nch/content/themes/nch/sass"
 
 /* Colors */
 
-$black: 
-$white: 
+$black: #000
+$white: #fff
+$fade: #F4F4ED 
+$brown: #5F362E
+$green: #B1C9A6
 
 /* Font Sizes & Fonts */
 
@@ -16,3 +19,46 @@ $bx1: 1.2em
 $bx2: 1.4em
 $bx3: 1.6em  
 
+%AldusLTStd-Roman
+  font-family: AldusLTStd-Roman
+  font-weight: normal
+  font-style: normal
+
+%AldusLTStd-Italic
+  font-family: AldusLTStd-Italic
+  font-weight: normal
+  font-style: normal
+
+%sweetsansregular
+  font-family: "Sweet Sans"
+  font-style: normal
+  font-weight: normal
+
+/* Font Style Mixins */
+
+=label-1($a: 1em, $b: 0.2em)
+  font-family: "Sweet Sans"
+  font-style: normal
+  font-weight: normal
+  font-size: $a
+  color: $brown
+  letter-spacing: $b
+  text-transform: uppercase
+
+=headline-1($a: 3em, $b: 0.05em, $c: 1.15em)
+  font-family: AldusLTStd-Roman
+  font-weight: normal
+  font-style: normal
+  font-size: $a
+  color: $brown
+  letter-spacing: $b
+  line-height: $c
+
+=para-1($a: 1.3em, $b: 0.05em, $c: 1.3em)
+  font-family: AldusLTStd-Roman
+  font-weight: normal
+  font-style: normal
+  font-size: $a
+  color: $brown
+  letter-spacing: $b
+  line-height: $c

@@ -9,14 +9,14 @@
 
 /* SITE CONTEXT -> Global styles */
 
-h1, h2, h3, h5, a
-  @extend .sweet-m
-  text-transform: uppercase
-  letter-spacing: 0.05em
-  color: $black
+h1
+  +label-1
+
+h2
+  +headline-1
 
 p
-  @extend .goth-b
+  +para-1
 
 
 html 
@@ -31,5 +31,25 @@ img
   width: 100%
   box-sizing: border-box
 
+/* Global Styles */
+
+section
+  h1, h2, p
+    +auto
+    text-align: center
+
+  h1
+    max-width: 380px
+    margin-top: 50px
+
+  h2
+    max-width: 560px
+    margin-top: 20px
+
+  p
+    max-width: 380px
+    margin-top: 25px
+
 /* Styles ... */
 
+@import 'newsletter'
