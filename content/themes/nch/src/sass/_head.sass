@@ -1,0 +1,101 @@
+/*  _head.sass */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+
+#head
+
+.head
+  opacity: 0
+  position: fixed
+  top: 40px
+  transition: 
+
+.head#left
+  left: 40px
+
+.head#right
+  right: 40px
+
+.mobile
+  +tablet
+    display: none
+
+.desktop
+  display: none
+
+  +tablet
+    display: block
+
+.bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100vw
+  height: 20vh
+
+  +small
+    height: 50vw
+
+  +desktop
+    height: 35vw
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+
+.head
+  text-transform: uppercase
+  color: $brown
+  transition: opacity 0.5s ease-in
+
+.head#left
+  @extend %sweetsansregular
+  font-size: 75%
+  letter-spacing: 0.15em
+
+
+.head#right
+  @extend %AldusLTStd-Roman
+  font-size: 72%
+  letter-spacing: 0.17em
+
+
+.bg
+  +img
+  opacity: 0
+
+  +small
+    +img($b: 50% 50%)
+
+
+.bg#pic-0
+  background-image: url('#{$uri}assets/head-mobile-01.png')
+  transition: opacity 1s ease-in
+
+  +small
+    background-image: url('#{$uri}assets/head-tablet-01.png')
+
+  +desktop
+    background-image: url('#{$uri}assets/head-desktop-01.png')
+
+.bg#pic-1
+  background-image: url('#{$uri}assets/head-mobile-02.png')
+  transition: opacity 1.8s ease-in
+
+  +small
+    background-image: url('#{$uri}assets/head-tablet-02.png')
+
+  +desktop
+    background-image: url('#{$uri}assets/head-desktop-02.png')
+
+.bg#pic-2
+  background-image: url('#{$uri}assets/head-mobile-03.png')
+  transition: opacity 2.6s ease-in
+
+  +small
+    background-image: url('#{$uri}assets/head-tablet-03.png')
+
+  +desktop
+    background-image: url('#{$uri}assets/head-desktop-03.png')

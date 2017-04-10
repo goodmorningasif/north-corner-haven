@@ -1,0 +1,23 @@
+/*  _invited.sass */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+
+#invited
+  margin-bottom: $pad-s
+  padding-top: 40px
+  padding-bottom: 40px
+
+  +tablet
+    margin-bottom: $pad-lg
+    padding-top: 80px
+    padding-bottom: 80px
+    height: 550px
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+
+#invited
+  +img($c: contain)
+  background-image: url('#{$uri}/assets/flower.svg')

@@ -5,64 +5,104 @@
 /* includes positioning styles like display, padding, margin, height */
 
 #foot
-  +flex(flex, space-between, center, wrap)
-  flex-direction: column
   padding-top: 25px
   padding-bottom: 25px
 
   p
     margin-top: 10px
+    max-width: 300px
 
-  .mail, .social, .address, .copyright
-    flex: 0 0 auto
-    margin-top: 40px
+#foot-wrap
+  +flex(flex, space-between, center, wrap)
+  flex-direction: column
 
-  .mail
+  +tablet
+    flex-direction: row
+    width: 900px
+    margin-left: auto
+    margin-right: auto
+
+  +desktop
+    width: 1200px
+
+
+.mail, .social, .address, .copyright
+  flex: 0 0 auto
+  margin-top: 40px
+
+.mail
+  order: 2
+  margin-bottom: 30px
+
+  +tablet
+    order: 1
+    margin-bottom: 0
+
+.social
+  order: 1
+
+  +tablet
     order: 2
 
-  .social
-    order: 1
+.address
+  order: 3
 
-  .address
-    order: 3
+  +tablet
 
-  .copyright
-    order: 4
+.copyright
+  order: 4
+
+  +tablet
+    flex: 1 0 100%
 
 
 #face, #insta
   +auto
   display: inline-block
-  width: 40px
-  height: 40px
+  width: 30px
+  height: 30px
+
+  +tablet
+    padding-top: 13px
+    width: 25px
+    height: 25px
 
 #face
-  margin-right: 30px
+  margin-right: 15px
 
-.border
-  position: fixed
+.dash
+  position: relative
+  width: 2px
+  height: 43px
 
-.border#left, .border#right
-  width: 8px
-  height: 100vh
+  +tablet
+    width: 100px
+    height: 2px
 
-.border#top, .border#bottom
-  height: 8px
-  width: 100vw
+  +desktop
+    width: 200px
 
-.border#left, .border#right, .border#top
-  top: 0
+.dash#left
+  top: -180px
+  left: calc(50% - 1px)
 
-.border#top, .border#bottom, .border#left
-  left: 0
+  +tablet
+    top: -91px
+    left: calc(50% - 170px)
 
-.border#bottom
-  bottom: 0
+  +desktop
+    left: calc(50% - 290px)
 
-.border#right
-  right: 0
+.dash#right
+  display: none
 
+  +tablet
+    display: block
+    top: -94px
+    left: calc(50% + 70px)
 
+  +desktop
+    left: calc(50% + 85px)
 
 
 
@@ -71,21 +111,40 @@
 
 #foot
   background-color: $green
+  text-tranform: uppercase
+
+  h1, h2, p
+    opacity: 1
 
   p
     font-family: "Sweet Sans"
     font-style: normal
     font-weight: normal 
-    font-size: 0.9em
+    font-size: 50%
     letter-spacing: 0.2em
     color: $white
     text-transform: uppercase
 
   a
     color: $white
+    transition: color 0.15s ease-in
 
-  .copyright
-    font-size: 0.8em
+    &:hover
+      color: $darkgreen
 
-.border
-  background-color: $green
+.num 
+  font-size: 124%
+
+.copyright
+  font-size: 0.8em
+
+.dash
+  background-color: $white
+
+#insta, #face
+  .face-cls-1, .insta-cls-1
+    transition: fill 0.15s ease-in
+
+  &:hover
+    .face-cls-1, .insta-cls-1
+      fill: $darkgreen

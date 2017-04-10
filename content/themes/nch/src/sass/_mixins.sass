@@ -1,15 +1,19 @@
 /* Media Breakpoints & Mixins */
-$break-xlarge: 1300px
+$break-xlarge: 1150px
 $break-large: 1024px
 $break-medium: 900px
 $break-small: 500px
 
 =desktop
-  @media(min-width: #{$break-xlarge})
+  @media(min-width: #{$break-large})
     @content
 
 =tablet
   @media(min-width: #{$break-medium})
+    @content
+
+=small 
+  @media(min-width: #{$break-small})
     @content
 
 =tiny
@@ -25,10 +29,10 @@ $break-small: 500px
   flex-wrap: $f
 
 /* Background Image Settings */
-=img($r: no-repeat, $p: center, $s: cover)
-  background-repeat: $r
-  background-position: $p
-  background-size: $s
+=img($a: no-repeat, $b: center, $c: cover)
+  background-repeat: $a
+  background-position: $b
+  background-size: $c
 
 /* Browser Detection  */
 =browser($browsers: Mozilla)

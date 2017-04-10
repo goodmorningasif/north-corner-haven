@@ -1,0 +1,39 @@
+/*  _main.sass */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+
+#main
+  margin-top: 20vh
+  margin-bottom: $pad-s
+  padding-top: 40px
+  padding-bottom: 40px
+  width: 100%
+
+  +tablet
+    margin-bottom: $pad-lg
+
+  svg
+    +auto
+    display: block
+    height: 100%
+
+#basket svg
+  width: 18%
+  max-width: 100px
+
+#logo svg
+  width: 70%
+  max-width: 300px
+  margin-top: 20px
+
+#basket
+  padding-top: 100px
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+
+#main
+  +img(no-repeat, center, 1280px 613px)
+  // background-image: url('#{$uri}assets/main-background.png')

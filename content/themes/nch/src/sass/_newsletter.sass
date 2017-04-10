@@ -5,33 +5,52 @@
 /* includes positioning styles like display, padding, margin, height */
 
 #newsletter
+  padding-top: 40px
+  padding-bottom: 40px
+  margin-bottom: 150px
+
+  +tablet
+    padding-top: 80px
+    padding-bottom: 80px
+
   form
     +auto
+    margin-top: 25px
     max-width: 380px
+    
 
     input
       +auto
       display: block
 
 #name, #email
-  max-width: 350px
+  max-width: 200px
   width: 100%
-  height: 40px
-  margin-top: 30px
+  height: 25px
+  margin-top: 20px
   padding-top: 5px
   padding-left: 10px
 
-    
-
+  
 #submit
   -webkit-appearance: none
-  height: 40px
-  width: 200px
+  height: 30px
+  width: 150px
   margin-top: 30px
 
 
 /* OBJECTS -> For styling objects */
 /* Includes cosmetic styles like color, typography, and borders */
+
+#newsletter
+  +img($c: contain)
+  background-image: url('#{$uri}/assets/nuts.svg')
+
+  form
+    opacity: 0
+    transition: opacity 1.75s ease-in
+    transition-delay: 2s;
+
 
 #name, #email
   border: 2px solid $brown
@@ -39,20 +58,28 @@
   font-weight: normal
   font-style: normal
   color: $brown
-  font-size: 1.3em
+  font-size: 85%
+  letter-spacing: 0.05em
+  background: none
+  text-align: center
 
 
   +placeholder
-	  font-family: AldusLTStd-Italic
-	  font-weight: normal
-	  font-style: normal
-	  color: $brown
-	  text-align: center
+    font-family: AldusLTStd-Italic
+    font-weight: normal
+    font-style: normal
+    color: $brown
 
 #submit
   @extend %sweetsansregular
-  border: none
+  border: 2px solid $brown
   background-color: $brown
   color: $white
-  font-size: 0.8em
+  font-size: 60%
   letter-spacing: 0.2em
+  transition: color 0.2s ease-in, background-color 0.2s ease-in
+  text-transform: uppercase
+
+  &:hover
+    background-color: transparent
+    color: $brown

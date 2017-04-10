@@ -1,0 +1,51 @@
+/*  _lines.sass */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+
+#lines
+
+.track
+  position: absolute
+  left: calc(50% - 1px)
+  top: 0
+  width: 2px
+  height: 0
+  z-index: 2
+
+.border
+  position: fixed
+  z-index: 12
+
+.border#left, .border#right
+  width: 8px
+  height: 100vh
+
+.border#top, .border#bottom
+  height: 8px
+  width: 100vw
+
+.border#left, .border#right, .border#top
+  top: 0
+
+.border#top, .border#bottom, .border#left
+  left: 0
+
+.border#bottom
+  bottom: 0
+
+.border#right
+  right: 0
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+
+.track
+  background-color: $brown
+  transform: translate3d(0, 0, 0)
+  transition: height 1.75s cubic-bezier(0.86, 0, 0.07, 1)
+
+.border
+  background-color: $green

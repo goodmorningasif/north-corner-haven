@@ -1,0 +1,55 @@
+/*  _insta-feed.sass */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+
+#insta-feed
+  opacity: 1
+  margin-bottom: 150px
+
+#feed
+  margin-top: 40px
+  margin-left: auto
+  margin-right: auto
+  width: 80vw
+  height: 100%
+
+  +tablet
+    +flex
+    width: 900px
+
+#sb_instagram
+  max-width: none !important
+
+#sb_instagram #sbi_images
+  +flex
+  float: none
+  +tablet
+    height: 330px
+  
+#feed #sb_instagram #sbi_images .sbi_item
+  padding-top: 30px !important
+
+  +tablet
+    flex: 0 0 calc(300px - 18px)
+    height: 300px
+
+#sb_instagram .sbi_photo
+  +tablet
+    height: 300px !important
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+
+#insta-feed
+  h1, h2, p
+    opacity: 1
+
+#feed
+  border-top: 2px solid $brown
+
+.pics
+	background-color: $green
+

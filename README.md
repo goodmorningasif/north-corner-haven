@@ -93,6 +93,32 @@ In Terminal ...
 
 ### Deployment & Updates
 
+#### First Deployment
+
+1. Create new WHM Account
+  * [x]  Click "Create A New Account" and follow prompts
+  * [x]  Click "List Accounts" and locate the account you just created
+2. Create new database and user on the server
+  * [x]  Navigate to the account's CPanel
+  * [x]  Click "MySQL Databases" and follow prompts to:
+    * [x]  Create a new database  
+    * [x]  Create a new user
+    * [x]  Connect the new user to the new database 
+3. Import local database to newly created server database 
+  * [x]  Navigate to the account's CPanel
+  * [x]  Click "phpMyAdmin"
+  * [x]  Select the database you created
+  * [x]  Click "Import" and follow prompts
+4. Update "local-config.php"
+  * [x]  Set lines 4, 7, and 10 with your database info
+5. Update "wp-config.php"
+  * [x]  Set var $local_path on line 91 with your server url
+6. Update "style.css" if necessary
+  * [x]  Find all instances of previous url and replace
+7. Update "functions.php"
+  * [x]  Set var $GLOBALS['root']
+
+
 ### Feature Documentation
 
 #### Instagram API

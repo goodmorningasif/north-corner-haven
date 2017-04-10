@@ -33,6 +33,15 @@
 
 <!-- ==== Section: Head ==== -->
 <section id="head">
-	<div>North Corner Haven</div>
-	<div>Established 1972</div>
+	<div class="head desktop" id="left">North Corner Haven</div>
+	<div class="head mobile" id="left">NCH</div>
+	<div class="head desktop" id="right">Established 1972</div>
+	<div class="head mobile" id="right">1972</div>
+
+</section>
+
+<section id="header-bg">
+  <div class="bg" id="pic-0"></div>
+  <div class="bg" id="pic-1"></div>
+  <div class="bg" id="pic-2"></div>
 </section>

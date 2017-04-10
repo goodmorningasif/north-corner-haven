@@ -5,6 +5,6 @@
 
 ?>
 
-<h1>The Land</h1>
-<h2>A short, 20 miles from south Charlotte.</h2>
-<p>North Corner Haven&trade; is located on over 600 acres of rolling hills, pastures and ponds for guests to explore. Founded in 1972 by The Dooley Family, the North Corner Haven team is transforming the land to foster sustainable farming and permaculture principles in daily practice.</p>
+<h1><?php the_field('s1_label', 2); ?></h1>
+<h2><?php the_field('s1_headline', 2) ?></h2>
+<p><?php the_field('s1_paragraph', 2) ?></p>

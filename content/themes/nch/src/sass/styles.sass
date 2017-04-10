@@ -11,21 +11,28 @@
 
 h1
   +label-1
+  +tablet
+    +label-1($a: 80%)
+
 
 h2
   +headline-1
+  +tablet
+    +headline-1($a: 252%)  
+
 
 p
   +para-1
-
+  +tablet
+    +para-1($a: 110%)
 
 html 
-  box-sizing: border-box
+//   box-sizing: border-box
 
-*, *:before, *:after
-  box-sizing: inherit
+// *, *:before, *:after
+//   box-sizing: inherit
 
-body
+body 
 
 img
   width: 100%
@@ -37,21 +44,48 @@ section
   h1, h2, p
     +auto
     text-align: center
+    opacity: 0
+    transition: opacity 1.75s ease-in
 
   h1
-    max-width: 380px
+    width: 318px
     margin-top: 50px
+    transition-delay: 1s;
 
   h2
-    max-width: 560px
+    width: 80vw
+    max-width: 318px
     margin-top: 20px
+    transition-delay: 1.4s;
+
+    +tablet
+      max-width: 450px
 
   p
-    max-width: 380px
+    width: 80vw
+    max-width: 318px
     margin-top: 25px
+    transition-delay: 1.8s;
+    widows: 3
+
+    +tablet
+      max-width: 420px
+      margin-top: 15px
 
 /* Styles ... */
 
+@import 'head'
+
+@import 'main'
+
+@import 'land'
+
+@import 'invited'
+
 @import 'newsletter'
 
+@import 'insta-feed'
+
 @import 'foot'
+
+@import 'lines'
