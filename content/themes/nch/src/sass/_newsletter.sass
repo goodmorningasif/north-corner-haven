@@ -13,17 +13,17 @@
     padding-top: 80px
     padding-bottom: 80px
 
-  form
+.mailchimp-form
+  +auto
+  margin-top: 25px
+  max-width: 380px
+  
+
+  input
     +auto
-    margin-top: 25px
-    max-width: 380px
-    
+    display: block
 
-    input
-      +auto
-      display: block
-
-#name, #email
+#f-name, #f-email
   max-width: 200px
   width: 100%
   height: 25px
@@ -32,11 +32,22 @@
   padding-left: 10px
 
   
-#submit
+#f-submit
   -webkit-appearance: none
   height: 30px
   width: 150px
-  margin-top: 30px
+  margin-top: 15px
+
+.wpcf7-form .wpcf7-mail-sent-ok, .wpcf7-form .wpcf7-validation-errors
+  position: relative
+  margin: 0 auto
+  padding: 10px
+  width: 420px
+  background: white
+  z-index: 90
+
+.email .wpcf7-not-valid-tip
+  padding-top: 20px
 
 
 /* OBJECTS -> For styling objects */
@@ -46,13 +57,13 @@
   +img($c: contain)
   background-image: url('#{$uri}/assets/nuts.svg')
 
-  form
+  .wpcf7
     opacity: 0
     transition: opacity 1.75s ease-in
     transition-delay: 2s;
 
 
-#name, #email
+#f-name, #f-email
   border: 2px solid $brown
   font-family: AldusLTStd-Italic
   font-weight: normal
@@ -60,7 +71,7 @@
   color: $brown
   font-size: 85%
   letter-spacing: 0.05em
-  background: none
+  background: none 
   text-align: center
 
 
@@ -70,7 +81,7 @@
     font-style: normal
     color: $brown
 
-#submit
+#f-submit
   @extend %sweetsansregular
   border: 2px solid $brown
   background-color: $brown
@@ -82,4 +93,19 @@
 
   &:hover
     background-color: transparent
-    color: $brown
+    color: $brown 
+
+.wpcf7-form .wpcf7-mail-sent-ok, .wpcf7-form .wpcf7-validation-errors
+  font-family: AldusLTStd-Italic
+  font-weight: normal
+  font-style: normal
+  color: $brown
+  border: none 
+  text-align: center
+
+.email .wpcf7-not-valid-tip
+  font-family: AldusLTStd-Italic
+  font-weight: normal
+  font-style: normal
+  color: $brown
+  text-align: center
