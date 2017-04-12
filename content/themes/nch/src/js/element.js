@@ -21,8 +21,8 @@ Element.prototype.hasVisited = function(){
 	return this.visited;
 }
 
-Element.prototype.timeOut = function(action){
-	return setTimeout(action.bind(this, action), 2000);
+Element.prototype.timeOut = function(action, timer=2000){
+	return setTimeout(action.bind(this, action), timer);
 }
 
 Element.prototype.resetPositions = function(){

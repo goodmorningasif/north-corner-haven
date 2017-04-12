@@ -2,12 +2,12 @@
 *
 * animateTrack
 *
-* Animates Track Lines between elements
+* Calculates space between elements, injects into track element
 *
 * @param {current}      :   specify current element
 * @param {currentBot}   :   specify bottom position of current element
 * @param {nextTop}      :   specify top position of next element
-* @params{adjustment}   :   If additional adjustment to bottom is needed
+* @params{adjustment}   :   specify additional adjustment to bottom, optional
 */
 
 
