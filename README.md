@@ -2,8 +2,7 @@
 # North Corner Haven
 [http://northcorner-haven.com](http://northcorner-haven.com)
 
-Last Update: April 12/2017
-Copyright 2017 SDCO Partners
+Last Update: April 12/2017 | Copyright 2017 SDCO Partners
 
 1. Getting Started 
   * Folder Structure
@@ -11,7 +10,7 @@ Copyright 2017 SDCO Partners
   * Starting/Editing Current Project
   * Deployment
   * Updates
-  * Feature Documents
+  * Feature Documentation
 2. Dev Environment
   * Gulp config
   * SASS
@@ -77,6 +76,7 @@ Copyright 2017 SDCO Partners
 └-- style.css 
 ```
 
+
 ### Initializing New Project
 Follow these steps to configure your install to your specific project.
 
@@ -103,19 +103,32 @@ Follow these steps to configure your install to your specific project.
   * [x]  set var $uri in _VARIABLES.SASS, 2 points
   * [x]  set @link and @package notes on all template files.
 7. WORDPRESS SUBMODULE
-  * [x]  run command `git submodule update --init`
+  * [x]  Run `git submodule update --init`
 
 
-### Starting/Editing Current Project
-Follow these steps to start or edit a current project. See notes under DEV ENVIRONMENT for more info
+### Editing Current Project
+Follow these steps to edit a current project. This will set up the repository and compile your JS and Sass files for your.
 
-In Terminal ...
+1. In Terminal ...
+  * [x]  Run `git clone` + your repo url
+  * [x]  Run `git submodule update --init`
+  * [x]  Run `npm install` 
+  * [x]  Run `gulp`
+2. Get config files/folders from server
+  * [x]  Download `wp-config.php`
+  * [x]  Download `local-config.php`
+  * [x]  Download `config.php`
+3. Setup Local Server DB 
+  * [x]  create db and user
+5. Install Wordpress
+  * [x]  Follow prompts 
+4. Use Migrate DB to fetch content from server
+  * [x]  Follow prompts 
 
-1. Run `npm install` 
-2. Run `gulp`
+If you choose not to follow these steps, you will be unable to keep the repository up-to-date, and you will have to deal with minified and uglified JS and CSS files. See notes under DEV ENVIRONMENT for more info.
+ 
 
-
-### Deployment
+### First Deployment
 
 1. Create new WHM Account
   * [x]  Click "Create A New Account" and follow prompts
@@ -132,19 +145,29 @@ In Terminal ...
   * [x]  Select the database you created
   * [x]  Click "Import" and follow prompts
 4. Upload folders to server
-  * Include Folders
-  * Exclude Folders
-4. Update "local-config.php"
+  * [x]  content
+  * [x]  wordpress
+  * [x]  index.php
+  * [x]  local-config.php
+  * [x]  wp-config.php    
+5. Update "local-config.php"
   * [x]  Set lines 4, 7, and 10 with your database info
-5. Update "wp-config.php"
+6. Update "wp-config.php"
   * [x]  Set var $local_path on line 91 with your server url
-6. Update "style.css" if necessary
+7. Update "style.css" if necessary
   * [x]  Find all instances of previous url and replace
-7. Update "functions.php"
+8. Update "functions.php"
   * [x]  Set var $GLOBALS['root']
 
 ### Updates
-
+If updating SASS files ...
+  * Compile files using GULP.
+  * Replace the `styles.css` file on server with your compiled file.
+If updating JS files ...
+  * Compile files using GULP.
+  * Replace the `scripts.js` file on server with your compiled file.
+For All other files ...
+  * Replace server file with your changed file.
 
 ### Feature Documentation
 
@@ -152,7 +175,7 @@ In Terminal ...
 
   The line animation that runs vertically down the site uses primarily JavaScript and CSS. 
 
-  Most of the timing and fading features utilize simple CSS trasnitions (read on for the one exception). To make adjustments to the track tranitions, use `lines.sass`. To make adjustments to the copy fade-in/fade-out transitions, use "styles.sass".
+  Most of the timing and fading features utilize simple CSS trasnitions (read on for the one exception). To make adjustments to the track tranitions, use `lines.sass`. To make adjustments to the copy fade-in/fade-out transitions, use `styles.sass`.
 
   `element.js` is a superclass object that takes in an element and calculates the top and bottom positions of that element based on it's current postion. It contains a 'visited' toggle to be used when a visitor has passed that particular element. Finally, the only timing control within JS files is the timeout method, which is used to delay that visited toggle. This is currently being used to give visitors just 2 extra seconds of time before fading in the following section.
 
@@ -175,11 +198,12 @@ In Terminal ...
   If the database is taking up too much space on our server, purge the entries under the Flamingo tab, then disable the plugin. If the Flamingo connection breaks, make sure the flamingo integration code is utilized under `Newsletter Signup > Additional Settings`.
 
 
-#### Known Bugs
+## Known Bugs
 
   * Track Slider does not auto-update length and position on browser width resize. The auto updater function still requires you to scroll first.
 
-### Team 
+
+## Team 
   
   * PROJECT MANAGER   :   Paige Feighley
   * UX/UI DESIGNER    :   Kristmar Muldrow
