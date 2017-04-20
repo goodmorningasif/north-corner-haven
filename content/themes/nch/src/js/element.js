@@ -8,7 +8,8 @@
 */
 
 function Element (selector) {
-	this.el = $j('#' + selector);
+	this.$ = jQuery.noConflict();
+	this.el = this.$('#' + selector);
 	this.top = this.el.offset().top;
 	this.bot = this.top + this.el.outerHeight(false);
 	this.visited = false;

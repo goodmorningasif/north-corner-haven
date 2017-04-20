@@ -7,7 +7,8 @@ var gulp = require("gulp")
 , plumber = require('gulp-plumber')
 , notify = require('gulp-notify')
 , livereload = require('gulp-livereload')
-, modernizr = require('gulp-modernizr');
+, modernizr = require('gulp-modernizr')
+, babel = require('gulp-babel');
 
 
 // uri
@@ -46,6 +47,9 @@ gulp.task('styles', function() {
 gulp.task('uglify', function() {
 	gulp.src(paths.js)
 		.pipe(plumber(plumberErrorHandler))
+		.pipe(babel({
+        presets: ['es2015']
+		  }))
 		.pipe(concat('scripts.js'))
 	  .pipe(uglify())
 	  .pipe(gulp.dest(paths.dest))
@@ -56,7 +60,6 @@ gulp.task('uglify', function() {
 gulp.task('modernizr', function() {
 	gulp.src([paths.modCss, paths.modJs])
     .pipe(modernizr())
-    .pipe(uglify())
     .pipe(gulp.dest(paths.dest));
 })
 

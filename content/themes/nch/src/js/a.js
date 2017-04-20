@@ -6,14 +6,14 @@
 *
 */
 
-$j = jQuery.noConflict();
+var $j = jQuery.noConflict();
 
 // extend Element into subclasses
 var main = new Element('main');
 var land = new Element('land');
 var invited = new Element('invited');
 var newsletter = new Element('newsletter');
-var instaFeed = new Element('insta-feed');
+var instaFeed = new Element('instafeed');
 
 
 /**
@@ -62,6 +62,7 @@ $j(document).ready(function(){
     
     // Keeps track of scroll position
 	  var scrollTop = $j(window).scrollTop();
+    var browserWidth = $j(window).width();
 
     // Adjustments to track triggers
     var trigger0 = main.bot/2 - 100;
@@ -80,7 +81,11 @@ $j(document).ready(function(){
 	  if ( scrollTop >= trigger2 && !invited.visited && land.visited) {
 	    triggerActions(invited, newsletter, 'newsletter', 'tr-2', 160);
 	  }
-    if ( scrollTop >= trigger3 && !newsletter.visited && invited.visited) {
+    if ( scrollTop >= trigger3 && !newsletter.visited && invited.visited && browserWidth < 800) {
+      console.log('browser width', browserWidth)
+      triggerActions(newsletter, instaFeed, 'insta-feed', 'tr-3', 160);
+    } else if ( scrollTop >= trigger3 && !newsletter.visited && invited.visited && browserWidth >= 800) {
+      console.log('browser width', browserWidth)
       triggerActions(newsletter, instaFeed, 'insta-feed', 'tr-3');
     }
 
