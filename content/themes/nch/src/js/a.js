@@ -13,7 +13,6 @@ var main = new Element('main');
 var land = new Element('land');
 var invited = new Element('invited');
 var newsletter = new Element('newsletter');
-var instaFeed = new Element('instafeed');
 
 
 /**
@@ -68,7 +67,6 @@ $j(document).ready(function(){
     var trigger0 = main.bot/2 - 100;
     var trigger1 = land.bot/2 - 100;
     var trigger2 = invited.bot/2 + 300;
-    var trigger3 = newsletter.bot/2 - 100;
     
 
     // Track Animations
@@ -81,13 +79,6 @@ $j(document).ready(function(){
 	  if ( scrollTop >= trigger2 && !invited.visited && land.visited) {
 	    triggerActions(invited, newsletter, 'newsletter', 'tr-2', 160);
 	  }
-    if ( scrollTop >= trigger3 && !newsletter.visited && invited.visited && browserWidth < 800) {
-      console.log('browser width', browserWidth)
-      triggerActions(newsletter, instaFeed, 'insta-feed', 'tr-3', 160);
-    } else if ( scrollTop >= trigger3 && !newsletter.visited && invited.visited && browserWidth >= 800) {
-      console.log('browser width', browserWidth)
-      triggerActions(newsletter, instaFeed, 'insta-feed', 'tr-3');
-    }
 
     // Fade in Header
     if ( scrollTop >= main.bot ){
@@ -101,7 +92,6 @@ $j(document).ready(function(){
 
   
   // Define actions on browser resize
-
   $j(window).resize(function(){
 
 	  //reset position markers to retrigger track height

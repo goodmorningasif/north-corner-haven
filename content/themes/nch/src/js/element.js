@@ -22,7 +22,7 @@ Element.prototype.hasVisited = function(){
 	return this.visited;
 }
 
-Element.prototype.timeOut = function(action, timer=2000){
+Element.prototype.timeOut = function(action, timer=500){
 	return setTimeout(action.bind(this, action), timer);
 }
 
