@@ -25,7 +25,7 @@
 		<div class="mail">
 			<p>Say Hello</p>
 			<p>
-			  <a href="mailto://info@northcorner-haven.com" alt="Email">
+			  <a href="mailto:info@northcorner-haven.com" alt="Email">
 			    info@northcorner-haven.com
 			  </a>
 			</p>
